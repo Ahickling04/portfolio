@@ -1,0 +1,207 @@
+:root {
+    --bg-pink: #f5cbe7;
+    --accent-pink: #f2aeb5; /* darker pink for photo border/tabs */
+    --main-purple: #cdaaf4;
+    --dark-ink: #45475a;
+    --shadow-offset: 12px;
+}
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    background-color: var(--bg-pink);
+    font-family: 'Bebas Neue', sans-serif;
+    /* Remove 'align-items: center' so the wrapper can stretch vertically */
+    display: flex; 
+    justify-content: center;
+    min-height: 100vh;
+    padding: 20px;
+    padding-bottom: 0px;
+}
+
+.portfolio-wrapper {
+    width: 100%;
+    max-width: 1000px;
+    /* Make the wrapper take up at least the full screen height minus padding */
+    min-height: calc(100vh - 40px); 
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    position: relative;
+}
+
+/* --- Header Section --- */
+.header-section {
+    display: flex;
+    align-items: center;
+    position: relative;
+    margin-bottom: 0px;
+}
+
+/* Profile Picture Styling */
+.profile-container {
+    z-index: 2; /* Sits on top of the banner */
+    position: relative;
+    width: 220px;
+    height: 220px;
+    background-color: var(--accent-pink);
+    padding: 20px; /* Creates the thick pink frame */
+    
+    /* The hard black shadow */
+    box-shadow: var(--shadow-offset) var(--shadow-offset) 0 var(--dark-ink); 
+}
+
+.profile-img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
+    border-radius: 2px;
+}
+
+/* --- Header Section --- */
+.header-section {
+    display: flex;
+    align-items: center;
+    position: relative;
+    /* 1. Bring the header to the front layer */
+    z-index: 10; 
+}
+
+/* ... (Keep your existing .profile-container and .profile-img styles here) ... */
+
+.name-banner {
+    background-color: var(--main-purple);
+    color:#45475a;
+    flex-grow: 1;
+    height: 160px;
+    display: flex;
+    align-items: center;
+    padding-left: 60px; 
+    margin-left: -40px; 
+    font-size: 2em;
+    /* The shadow will now cast OVER the tabs, adding depth */
+    box-shadow: var(--shadow-offset) var(--shadow-offset) 0 var(--dark-ink);
+    border: 2px solid transparent;
+}
+
+/* --- Social Links Section --- */
+.social-section {
+    display: flex;
+    justify-content: flex-end; 
+    gap: 20px;
+    
+    /* 2. Pull the tabs UP so they slide behind the banner */
+    margin-top: -25px; 
+    
+    /* 3. Adjust horizontal alignment to match your preference */
+    padding-right: 50px; 
+    
+    position: relative;
+    /* 4. Send them to the back layer */
+    z-index: 1; 
+}
+
+.social-tab {
+    background-color: var(--accent-pink);
+    width: 90px;
+    height: 100px; /* Make sure this is long enough to peek out */
+    display: flex;
+    justify-content: center;
+    align-items: flex-end; /* Push icons to the bottom so they aren't hidden */
+    padding-bottom: 20px;  /* Add space for the icon at bottom */
+    
+    clip-path: polygon(0 0, 100% 0, 100% 85%, 0 100%);
+    filter: drop-shadow(8px 8px 0px var(--dark-ink));
+    
+    /* Smooth transition for the hover effect */
+    transition: transform 0.2s ease;
+}
+
+/* When hovering, the tab slides down slightly like a ticket */
+.social-tab:hover {
+    transform: translateY(10px); 
+}
+
+.social-tab a {
+    color: var(--dark-ink);
+    font-size: 3.5rem;
+    text-decoration: none;
+}
+
+/* --- Full Width Bottom Bar --- */
+.nav-section {
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 120px; /* Fixed height for the footer area */
+    
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr; /* Equal 3 columns */
+    gap: 0; /* No gaps, they touch each other */
+    
+    z-index: 100; /* Ensure it sits on top of other content */
+    filter: drop-shadow(0px -5px 0px var(--dark-ink)); /* Shadow points UP now */
+}
+
+.nav-card {
+    background-color: var(--main-purple);
+    display: flex;
+    justify-content: center; /* Center text horizontally */
+    align-items: flex-end;   /* Text at bottom */
+    padding-bottom: 20px;
+    cursor: pointer;
+    transition: background-color 0.2s, transform 0.2s;
+    
+    /* Create the slanted top edge */
+    clip-path: polygon(0 20%, 100% 0, 100% 100%, 0% 100%);
+    
+    /* Add a border effect using box-shadow since border doesn't work well with clip-path */
+    /* This creates a separator line on the right of every card */
+    box-shadow: inset -5px 0 0 0 var(--dark-ink);
+}
+
+/* Remove the separator line from the last card */
+.nav-card:last-child {
+    box-shadow: none;
+}
+
+/* Optional: Make the middle one slant the opposite way for variety */
+.nav-card.center-card {
+    background-color: var(--accent-pink); /* Alternate color */
+    clip-path: polygon(0 0, 100% 20%, 100% 100%, 0% 100%);
+}
+
+/* Hover Effects */
+.nav-card:hover {
+    background-color: #fff; /* Flash white on hover */
+    color: var(--dark-ink);
+}
+
+.nav-card h2 {
+    font-size: 2.5rem;
+    color: var(--dark-ink);
+    pointer-events: none; /* Prevents text selection flickering */
+}
+
+/* Mobile Adjustment: Stack them if the screen is too thin */
+@media (max-width: 600px) {
+    .nav-section {
+        position: static; /* Unstick it so it flows normally */
+        height: auto;
+        grid-template-columns: 1fr; /* Stack vertically */
+    }
+    
+    .nav-card {
+        height: 100px;
+        width: 100%;
+        clip-path: none; /* Remove angle for mobile stacking */
+        border-bottom: 5px solid var(--dark-ink);
+        box-shadow: none;
+    }
+}
