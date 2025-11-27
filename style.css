@@ -4,6 +4,7 @@
     --main-purple: #cdaaf4;
     --dark-ink: #45475a;
     --shadow-offset: 12px;
+    --skill-button-bg: #f2cdcd;
 }
 
 * {
@@ -132,6 +133,67 @@ body {
     font-size: 3.5rem;
     text-decoration: none;
 }
+
+
+/* --- main content section --- */
+#textbox {
+    background-color: var(--main-purple);
+    color: var(--dark-ink);
+    padding: 20px;
+    margin-top: 80px; /* Space below header */
+    margin-bottom: 100px; /* Space for the fixed bottom nav */
+    box-shadow: var(--shadow-offset) var(--shadow-offset) 0 var(--dark-ink);
+    font-size: 1.5rem;
+    line-height: 1.4;
+    border: 2px solid transparent;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.highlightedProject {
+    background-color: var(--main-purple);
+    color: var(--dark-ink);
+    padding: 20px;
+    margin-bottom: 140px; /* Space for the fixed bottom nav */
+    width: fit-content;
+    box-shadow: var(--shadow-offset) var(--shadow-offset) 0 var(--dark-ink);
+    font-size: 1.5rem;
+    line-height: 1.4;
+    border: 2px solid transparent;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 10px;
+}
+
+.projectBox {
+    background-color: var(--accent-pink);
+    padding: 10px;
+    box-shadow: var(--shadow-offset) var(--shadow-offset) 0 var(--dark-ink);
+    border: 2px solid transparent;
+    flex: 1;
+    margin: 5px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.projectBox:hover {
+    background-color: #fff; /* Flash white on hover */
+    color: var(--dark-ink);
+}
+
+.skillButton {
+    display: inline-block;
+    background-color: var(--skill-button-bg);
+    width: fit-content;
+    height: fit-content;
+    border: 2px solid transparent;
+    margin-top: 10px;
+}
+
 
 /* --- Full Width Bottom Bar --- */
 .nav-section {
