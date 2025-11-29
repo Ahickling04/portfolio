@@ -180,6 +180,7 @@ body {
     flex-direction: column;
     justify-content: center;
     align-items: center;
+    min-height: 350px;
 }
 
 .projectBox2 {
@@ -193,6 +194,7 @@ body {
     flex-direction: column;
     justify-content: center;
     align-items: center;
+    min-height: 350px;
 }
 
 .projectBox:hover {
