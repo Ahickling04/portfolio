@@ -32,6 +32,7 @@ body {
     justify-content: center;
     align-items: center;
     position: relative;
+
     margin-bottom: 0px;
 }
 
@@ -121,12 +122,15 @@ body {
     line-height: 1.4;
     border: 2px solid transparent;
     display: flex;
+    flex-direction: column;
     justify-content: center;
     align-items: center;
     max-width: fit-content;
     width: 48%;
     position: relative;
 }
+
+
 
 .skills ul {
     list-style-type: disc;
