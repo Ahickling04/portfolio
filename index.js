@@ -17,9 +17,9 @@ projects.addEventListener("click", () => {
 })
 
 osmp.addEventListener("click", () => {
-    window.location.href = "https://github.com/Ahickling04/osmp";
+    open("https://github.com/Ahickling04/osmp")
 })
 
 ttt.addEventListener("click", () => {
-    window.location.href = "https://github.com/Ahickling04/tic-tac-tui";
+    open("https://github.com/Ahickling04/tic-tac-tui")
 })
