@@ -126,10 +126,28 @@ body {
     justify-content: center;
     align-items: center;
     max-width: fit-content;
-    width: 48%;
+    width: 30%;
     position: relative;
 }
 
+.who {
+    background-color: var(--main-purple);
+    color: var(--dark-ink);
+    padding: 20px;
+    margin-top: 0px;
+    margin-bottom: 50px; /* Space for the fixed bottom nav */
+    box-shadow: var(--shadow-offset) var(--shadow-offset) 0 var(--dark-ink);
+    font-size: 1.5rem;
+    line-height: 1.4;
+    border: 2px solid transparent;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    max-width: fit-content;
+    width: 100%;
+    position: relative;
+}
 
 
 .skills ul {
@@ -142,6 +160,15 @@ body {
     /*gap: 40px;*/
     justify-content: space-between;
     align-items: flex-start;
-    margin-top: 100px; /* Space below title bar */
+    margin-top: 10px;
+    width: 100%;
+}
+
+.whoSection {
+    display: flex;
+    /*gap: 40px;*/
+    justify-content: space-between;
+    align-items: flex-start;
+    margin-top: 50px; /* Space below title bar */
     width: 100%;
 }
