@@ -8,7 +8,7 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
-    <link rel="stylesheet" href="about.css">
+    <link rel="stylesheet" href="projects.css">
     <link rel="icon" href="favicon.png" type="image/x-icon">
 </head>
 <body>
@@ -29,10 +29,49 @@
             </div>
         </section>
         <div class="infoSection">
-            <div class="skills">
-                <h2>
-                    This page is currently under construction.
-                </h2>
+            <div class="projectAndContactTime">
+            <div class = "highlightedProject">
+                <div class = "projectBox" id="osmp">
+                    <h1>OSMP</h1>
+                    <h2>Open Source Music Player (WIP)</h2>
+                    <p>A simple open source music player, a GUI based on wxwidgets. Basically building this because I cannot find a decent music player that is either janky, clunky, buggy or a general pain to use on linux.</p>
+                    <div>
+                        <div class="skillButton">C++</div>
+                        <div class="skillButton">CMake</div>
+                        <div class="skillButton">Cross platform</div>
+                    </div>    
+                </div>
+                <div class = "projectBox" id="ticTacTUI">
+                    <h1>Tic Tac TUI</h1>
+                    <h2>TUI noughts and crossed</h2>
+                    <p>A simple noughts and crosses game using FTXUI</p>
+                    <div>
+                        <div class="skillButton">C++</div>
+                        <div class="skillButton">CMake</div>
+                        <div class="skillButton">Cross platform</div>
+                    </div>
+                </div>
+                
+                </div>
+            </div>
+        </div>
+        <div class="textBox">
+            <h2>
+                Projects i'm currently working on:
+            </h2>
+            <div class="projectBox2">
+                <h2>Peniforuzu</h2>
+                <div class="projectText">
+                    <p class="projectP">A 3D 2 pence machine rouglike inspired by Balatro. the game is being built with the godot engine and is being worked on by 5 people including myself.<br>The goal is to have at least a playable demo uploaded to itch.io soon</p>
+                    <img src="imgs/peniforuzu.gif" alt="peniforuzu gif" class="projectGif">
+                </div>
+            </div>
+            <div class="projectBox2">
+                <h2>osmp</h2>
+                <div class="projectText">
+                    <p class="projectP">An open-source music player built with C++ and cmake, utilising WxWidgets for the GUI.<br>As of right now still in active development and is only being worked on by me, however it is a fun little challenge.</p>
+                    
+                </div>
             </div>
         </div>
     </main>

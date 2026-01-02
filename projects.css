@@ -1,0 +1,242 @@
+:root{
+    --bg-pink: #f5cbe7;
+    --accent-pink: #f2aeb5; /* darker pink for photo border/tabs */
+    --main-purple: #cdaaf4;
+    --dark-ink: #45475a;
+    --shadow-offset: 12px;
+    --skill-button-bg: #f2cdcd;
+}
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    background-color: var(--bg-pink);
+    font-family: 'Bebas Neue', sans-serif;
+    /* Remove 'align-items: center' so the wrapper can stretch vertically */
+    display: flex; 
+    justify-content: center;
+    min-height: 100vh;
+    padding: 20px;
+    padding-bottom: 0px;
+}
+
+/*header section*/
+
+/* --- Header Section --- */
+.header-section {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    margin-top: 75px;
+    margin-bottom: 0px;
+}
+
+/* Profile Picture Styling */
+.profile-container {
+    z-index: 2; /* Sits on top of the banner */
+    position: relative;
+    width: 220px;
+    height: 220px;
+    background-color: var(--accent-pink);
+    padding: 20px; /* Creates the thick pink frame */
+    
+    /* The hard black shadow */
+    box-shadow: var(--shadow-offset) var(--shadow-offset) 0 var(--dark-ink); 
+}
+
+.profile-img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
+    border-radius: 2px;
+}
+
+.profile-img:hover {
+    transform: scale(1.05);
+    transition: transform 0.3s ease;
+}
+
+/* --- Header Section --- */
+.header-section {
+    display: flex;
+    align-items: center;
+    position: relative;
+    width: 100%;
+    /* 1. Bring the header to the front layer */
+    z-index: 10; 
+}
+
+.name-banner {
+    background-color: var(--main-purple);
+    color:#45475a;
+    flex-grow: 1;
+    height: 160px;
+    display: flex;
+    align-items: center;
+    padding-left: 100px; 
+    margin-left: -40px; 
+    font-size: 2em;
+    /* The shadow will now cast OVER the tabs, adding depth */
+    box-shadow: var(--shadow-offset) var(--shadow-offset) 0 var(--dark-ink);
+    border: 2px solid transparent;
+}
+
+
+.titleBar {
+    background-color: var(--main-purple);
+    color:var(--dark-ink);
+    padding: 20px;
+    box-shadow: var(--shadow-offset) var(--shadow-offset) 0 var(--dark-ink);
+    text-align: center;
+    margin: 20px;
+    width: 100%;
+    position: absolute;
+    top: 0;
+}
+
+.socialSection {
+    display: flex;
+    gap: 20px;
+    margin-top: 10px;
+}
+
+.socialSection a {
+    color: var(--dark-ink);
+    font-size: 3.5rem;
+    text-decoration: none;
+}
+
+.content {
+    width: 100%;
+    max-width: 1500px;
+    /* Make the wrapper take up at least the full screen height minus padding */
+    min-height: calc(100vh - 40px); 
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    position: relative;
+}
+
+.textBox {
+    background-color: var(--main-purple);
+    color: var(--dark-ink);
+    padding: 20px;
+    margin-top: 0px;
+    margin-bottom: 100px; /* Space for the fixed bottom nav */
+    box-shadow: var(--shadow-offset) var(--shadow-offset) 0 var(--dark-ink);
+    font-size: 1.5rem;
+    line-height: 1.4;
+    border: 2px solid transparent;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+}
+
+#contactInfo {
+    width: 100%;
+}
+
+#social {
+    width: 75%;
+}
+
+.skills ul {
+    list-style-type: disc;
+    padding-left: 40px;
+}
+
+.infoSection {
+    display: flex;
+    /*gap: 40px;*/
+    justify-content: space-between;
+    align-items: flex-start;
+    margin-top: 50px;
+    width: 100%;
+}
+
+.highlightedProject {
+    background-color: var(--main-purple);
+    color: var(--dark-ink);
+    padding: 20px;
+    margin-bottom: 50px; /* Space for the fixed bottom nav */
+    width: fit-content;
+    box-shadow: var(--shadow-offset) var(--shadow-offset) 0 var(--dark-ink);
+    font-size: 1.5rem;
+    line-height: 1.4;
+    border: 2px solid transparent;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    gap: 10px;
+}
+
+.projectBox {
+    background-color: var(--accent-pink);
+    padding: 10px;
+    box-shadow: var(--shadow-offset) var(--shadow-offset) 0 var(--dark-ink);
+    border: 2px solid transparent;
+    flex: 1;
+    margin: 5px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    min-height: 350px;
+}
+
+.projectBox2 {
+    background-color: var(--accent-pink);
+    padding: 10px;
+    box-shadow: var(--shadow-offset) var(--shadow-offset) 0 var(--dark-ink);
+    border: 2px solid transparent;
+    flex: 1;
+    margin: 5px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    min-height: 350px;
+    min-width: 100%
+}
+
+.projectBox:hover {
+    background-color: #fff; /* Flash white on hover */
+    color: var(--dark-ink);
+}
+
+.skillButton {
+    display: inline-block;
+    background-color: var(--skill-button-bg);
+    width: fit-content;
+    height: fit-content;
+    border: 2px solid transparent;
+    margin-top: 10px;
+    padding: 5px;
+    border-radius: 5px;
+}
+
+.projectGif {
+    width: 50%;
+    height: auto;
+}
+
+.projectP{
+    font-size: 1.5em;
+    width: 90%;
+}   
+
+.projectText {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    gap: 20px;
+}
