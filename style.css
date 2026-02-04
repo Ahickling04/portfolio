@@ -233,7 +233,7 @@ body {
     height: 120px; /* Fixed height for the footer area */
     
     display: grid;
-    grid-template-columns: 1fr 1fr 1fr; /* Equal 3 columns */
+    grid-template-columns: 1fr 1fr 1fr 1fr; /* Equal 4 columns */
     gap: 0; /* No gaps, they touch each other */
     
     z-index: 100; /* Ensure it sits on top of other content */

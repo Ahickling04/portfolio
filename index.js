@@ -5,6 +5,7 @@ let osmp = document.getElementById("osmp");
 let ttt = document.getElementById("ticTacTUI");
 let github = document.getElementById("github");
 let linkedin = document.getElementById("linkedin");
+let projectArchive = document.getElementById("projectArchive")
 
 github.addEventListener("click", () => {
     open("https://github.com/Ahickling04")
@@ -32,4 +33,8 @@ osmp.addEventListener("click", () => {
 
 ttt.addEventListener("click", () => {
     open("https://github.com/Ahickling04/tic-tac-tui")
+})
+
+projectArchive.addEventListener("click", () => {
+    window.location.href = "https://dev.ahickling.co.uk"
 })
