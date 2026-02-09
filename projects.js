@@ -1,6 +1,7 @@
 let homeButton = document.getElementById('homeButton');
 let osmp = document.getElementById("osmp");
 let ttt = document.getElementById("ticTacTUI");
+let apa = document.getElementById("projectArchive")
 
 homeButton.addEventListener('click', function() {
     window.location.href = 'index.html';
@@ -12,4 +13,8 @@ osmp.addEventListener("click", () => {
 
 ttt.addEventListener("click", () => {
     open("https://github.com/Ahickling04/tic-tac-tui")
+})
+
+apa.addEventListener("click", () => {
+    open("https://dev.ahickling.co.uk/")
 })

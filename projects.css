@@ -224,6 +224,10 @@ body {
     border-radius: 5px;
 }
 
+.skillButton p {
+    text-align: center;
+}
+
 .projectGif {
     width: 50%;
     height: auto;
